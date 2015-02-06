@@ -1,0 +1,36 @@
+# PSEUDOCODE
+
+# OUTLINE
+# INPUT: string w/ numbers & dashes for spaces
+# OUTPUT: a complete board as a single string
+
+# I.    Is the board complete?
+# II.   Set up the board
+            # i. turn string into a data structure
+# III.  Iterate through the board until we reach a cell with the value "-"
+# IV.  For a cell with a "-":
+            # i. Eliminate the numbers 1-9 which appear in the colum.
+            # ii. Eliminate leftover numbers that appear in the row
+            # iii. Eliminate leftover numbers that appear in the block.
+# V. If there's only one pussible number left, insert it into the cell.
+            # => Return to step III
+# After 1 run through the board, go back to step I (run recursively!)
+
+
+
+# board_complete?
+# INPUT: a string w/ numbers & dashes. Dashes represent incomplete cells.
+# OUTPUT: true or false
+# 1. if the string doesn't include any dashes, RETURN TRUE
+# 2. otherwise, RETURN FALSE
+
+# set_up_board
+# INPUT: a string of numbers and dashes
+# OUTPUT: data structure for iterating through the sudoku board.
+# 1. split the string on every character into an array (OWN METHOD)
+# 2. convert all numbers into integers (OWN METHOD)
+# 3. split the array into segments of nine
+
+# split_up_string
+# INPUT: a string
+# OUTPUT: an array of strings
